@@ -1,0 +1,579 @@
+/* General Styles */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+
+/* Navigation Bar */
+.navbar {
+  background-color: #014D4E;
+  padding: 20px 0;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: auto;
+  height: 90px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-links2 {
+  display: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.nav-links li:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* Main Image Section */
+
+.main-image-section {
+  position: relative;
+  background-image: url('/Edenéa-page/public/image/forest-image.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* ビューポートの高さに合わせる */
+
+}
+
+.main-image {
+  display: none; /* 元のimgタグを非表示にする */
+}
+
+.container_inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  color: black;
+  background-color: #fff;
+  opacity: 0.5;
+  padding: 80px;
+  line-height: 2em;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.container_inner h2 {
+  text-align: center;
+}
+
+/* About Section */
+.about-section {
+  padding: 120px 80px;
+  background-color: #fff;
+}
+
+
+.concept {
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+}
+.preference h2 {
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 横2列 */
+  grid-template-rows: repeat(4, 1fr);    /* 縦4行 */
+  grid-template-areas: 
+  "image1 item1"
+  "image2 item2"
+  "image3 item3"
+  "image4 item4"
+  ;
+  place-items: start center;
+  align-items: center;
+  gap: 80px;
+  
+}
+
+.image1 {
+  grid-area: image1;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  
+}
+.image2 {
+  grid-area: item2;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+
+
+}
+.image3 {
+  grid-area: image3;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+
+}
+.image4 {
+  grid-area: item4;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  
+}
+
+.item1 {
+  grid-area: item1;
+  
+  
+
+}
+.item2 {
+  grid-area: image2;
+  
+
+}
+.item3 {
+  grid-area: item3;
+  
+
+}
+.item4 {
+  grid-area: image4;
+
+
+}
+
+.text {
+  overflow-wrap: break-word;
+}
+
+.object {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* トランジションを適用 */
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.item1,
+.item2,
+.item3,
+.item4 {
+  will-change: opacity; /* 不透明度が変化することをブラウザに伝える */
+}
+
+
+/* 画面幅が768px以下の場合 */
+@media screen and (max-width: 1190px) {
+  
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .main-image-section {
+    background-attachment: scroll; /* 背景画像が固定されず、スクロールに合わせて動くように変更 */
+    height: 70vh; /* 高さをビューポートの70%に変更 */
+  }
+
+  .container_inner {
+    width: 60%; /* 内部コンテンツの幅を縮小 */
+    padding: 40px; /* パディングを縮小 */
+    transform: translate(-50%, -40%); /* テキスト位置を少し上に調整 */
+    top: 35%;
+  }
+
+  .container3 {
+    grid-template-columns: 1fr; /* 1列に変更 */
+    grid-template-rows: repeat(8, 1fr); /* 8行に変更 */
+    grid-template-areas: 
+    "image1"
+    "item1"
+    "image2"
+    "item2"
+    "image3"
+    "item3"
+    "image4"
+    "item4";
+    gap: 10px; /* ギャップを調整 */
+  }
+  .image2 {
+    grid-area: image2;
+  }
+  .image4 {
+    grid-area: image4;
+  }
+  .item2 {
+    grid-area: item2;
+  }
+  .item4 {
+    grid-area: item4;
+  }
+
+
+
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .item1,
+  .item2,
+  .item3,
+  .item4 {
+    width: 100%; /* 幅を100%に設定 */
+    height: auto; /* 高さを自動調整 */
+  }
+
+  .about-section {
+    padding: 60px 40px; /* パディングを縮小 */
+  }
+}
+
+/* 画面幅が500px以下の場合 */
+@media screen and (max-width: 520px) {
+
+  .main-image-section {
+    height: 70vh; /* 高さをビューポートの50%に変更 */
+  }
+
+  .container_inner {
+    width: 70%; /* 内部コンテンツの幅をさらに縮小 */
+    padding: 40px; /* パディングをさらに縮小 */
+    transform: translate(-50%, -50%); /* テキスト位置を中央に戻す */
+    line-height: 1.5em; /* 行間を少し詰める */
+    margin-top: 40px;
+  }
+
+  .container_inner h2 {
+    font-size: 1.5em; /* ヘッダーのフォントサイズを縮小 */
+  }
+
+  .container3 {
+    gap: 20px; /* ギャップをさらに縮小 */
+  }
+
+  .about-section {
+    padding: 40px 20px; /* パディングをさらに縮小 */
+  }
+
+  .preference h2 {
+    margin: 0 0 50px 0; /* マージンを縮小 */
+  }
+}
+
+
+/* History Section */
+.history-section {
+  padding: 120px 80px;
+  background-color: #fff;
+}
+
+.history-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.history-article {
+  margin-bottom: 60px;
+}
+
+.article-title {
+  font-size: 24px;
+  color: #154734;
+  margin-bottom: 15px;
+}
+
+.article-content {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.end-pct  {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 28px;
+  }
+
+  .article-title {
+      font-size: 20px;
+  }
+
+  .article-content {
+      font-size: 15px;
+  }
+
+  .history-section {
+      padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .history-section {
+    padding: 40px 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #014D4E;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.navi {
+  
+  padding: 20px;
+}
+
+.footer_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* アイテム間の余白 */
+}
+
+.footer_nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_nav li {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer_nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.footer_nav a:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links img {
+  height: 30px;
+}
+.social-links img:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  .footer_nav {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links2 {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 3;
+      list-style: none;
+      background-color: #014D4E;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 99;
+      font-size: 20px;
+      opacity: 0;
+      transition: all 0.3s;
+      transform: translate(100%);
+  }
+
+  .nav-links2.show {
+    opacity: 1;
+    transform: none;
+  }
+  
+
+  .nav-links2 a {
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links2 li:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* ハンバーガーメニューの上下の線 */
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-line::before {
+    top: -10px;
+}
+
+.menu-line::after {
+    top: 10px;
+}
+
+
+  .menu-line.active::before {
+   transform: rotate(45deg);
+  top: 0;
+  }
+
+  .menu-line.active {
+    background-color: transparent;
+  }
+
+  .menu-line.active::after{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+}

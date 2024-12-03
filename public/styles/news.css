@@ -1,0 +1,418 @@
+/* General Styles */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+
+/* Navigation Bar */
+.navbar {
+  background-color: #014D4E;
+  padding: 20px 0;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: auto;
+  height: 90px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-links2 {
+  display: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.nav-links li:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+
+
+/* News一覧 */
+
+.news-board {
+  margin-top: 250px; 
+ 
+}
+.news-board h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.news-animation {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  margin-bottom: 100px;
+}
+.news-animation line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawLine 2s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+
+.edenea-list-article {
+  display: flex;
+  overflow: hidden;
+  margin: 0 100px 20px 100px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #154734;
+  align-items: center; 
+  cursor: pointer;
+}
+.edenea-list-article:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.edenea-list-article a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  align-items: center;
+}
+
+.edenea-list-figure {
+  width: 300px; /* 画像の幅を固定 */
+  height: 300px; /* 画像の高さを固定 */
+  flex-shrink: 0; /* 画像のサイズが変わらないようにする */
+}
+
+.edenea-list__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像をコンテナにフィットさせる */
+}
+
+.edenea-list-block {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  flex-grow: 1; /* 残りのスペースを占有 */
+}
+
+.edenea-list__h2 {
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  vertical-align: baseline;
+  word-break: break-word; /* 長いテキストは自動的に改行 */
+}
+
+.edenea-list-date {
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.edenea-list__time {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.edenea-list__new {
+  border: 1px solid #666;
+  color: #154734;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .edenea-list-article {
+    margin: 0 20px 20px 20px; 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .edenea-list-article a {
+    flex-direction: column; 
+    justify-content: center;
+  }
+
+  .edenea-list-block {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .edenea-list-figure {
+    width: 500px; 
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .edenea-list-article {
+    margin: 0 20px 20px 20px; 
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .edenea-list-article a {
+    flex-direction: column; 
+    justify-content: center;
+  }
+
+  .edenea-list-block {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .edenea-list-figure {
+    width: 300px;
+    height: 300px; 
+  }
+
+  .edenea-list__h2 {
+    font-size: 16px; 
+  }
+
+  .edenea-list__new {
+    font-size: 10px; 
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #014D4E;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.navi {
+  
+  padding: 20px;
+}
+
+.footer_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* アイテム間の余白 */
+}
+
+.footer_nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_nav li {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer_nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.footer_nav a:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links img {
+  height: 30px;
+}
+.social-links img:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  .footer_nav {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links2 {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 3;
+      list-style: none;
+      background-color: #014D4E;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 99;
+      font-size: 20px;
+      opacity: 0;
+      transition: all 0.3s;
+      transform: translate(100%);
+  }
+
+  .nav-links2.show {
+    opacity: 1;
+    transform: none;
+  }
+  
+
+  .nav-links2 a {
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links2 li:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* ハンバーガーメニューの上下の線 */
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-line::before {
+    top: -10px;
+}
+
+.menu-line::after {
+    top: 10px;
+}
+
+
+  .menu-line.active::before {
+   transform: rotate(45deg);
+  top: 0;
+  }
+
+  .menu-line.active {
+    background-color: transparent;
+  }
+
+  .menu-line.active::after{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+}

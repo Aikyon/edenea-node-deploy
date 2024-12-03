@@ -1,0 +1,394 @@
+/* General Styles */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+
+/* Navigation Bar */
+.navbar {
+  background-color: #014D4E;
+  padding: 20px 0;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: auto;
+  height: 90px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-links2 {
+  display: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.nav-links li:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* E-news Section */
+
+.E-news-section {
+  padding: 150px 0 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.E-list-article {
+  margin: 0;
+  text-align: center;
+}
+
+.E-list__h1 {
+  font-size: 24px;
+  color: #154734;
+  margin: 50px 0 20px 0;
+ 
+}
+
+.E-list-date {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.E-list__time {
+  font-weight: bold;
+}
+
+.E-list-content {
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 40px;
+ 
+}
+
+.E-list-content p {
+  margin-bottom: 40px;
+  margin-top: 20px;
+
+}
+
+.E-ul-box {
+  display: inline-block;
+  
+}
+
+.E-ul-box li {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.E-ul-box2 {
+  display: inline-block;
+}
+
+.E-ul-box2 li {
+  text-align: left;
+}
+
+
+.E-list-figure {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.E-list__image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .E-news-section {
+    padding: 100px 10px 20px 10px;
+  }
+  .E-list__h1 {
+    font-size: 20px;
+  }
+
+  .E-list-content {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .E-ul-box2 {
+    padding: 0;
+  }
+
+  .E-list-figure {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .E-list__image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+   
+  }
+}
+
+@media (max-width: 520px) {
+  .E-news-section {
+    padding: 80px 20px 20px 20px;
+
+  }
+  .E-list-content {
+    font-size: 15px;
+  }
+
+  .E-ul-box2 {
+    padding: 0;
+  }
+
+  .E-list-figure {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .E-list__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+   
+  }
+
+
+}
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #014D4E;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.navi {
+  
+  padding: 20px;
+}
+
+.footer_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* アイテム間の余白 */
+}
+
+.footer_nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_nav li {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer_nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.footer_nav a:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links img {
+  height: 30px;
+}
+.social-links img:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  .footer_nav {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links2 {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 3;
+      list-style: none;
+      background-color: #014D4E;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 99;
+      font-size: 20px;
+      opacity: 0;
+      transition: all 0.3s;
+      transform: translate(100%);
+  }
+
+  .nav-links2.show {
+    opacity: 1;
+    transform: none;
+  }
+  
+
+  .nav-links2 a {
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links2 li:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* ハンバーガーメニューの上下の線 */
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-line::before {
+    top: -10px;
+}
+
+.menu-line::after {
+    top: 10px;
+}
+
+
+  .menu-line.active::before {
+   transform: rotate(45deg);
+  top: 0;
+  }
+
+  .menu-line.active {
+    background-color: transparent;
+  }
+
+  .menu-line.active::after{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .navbar {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+}

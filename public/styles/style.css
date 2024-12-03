@@ -1,0 +1,530 @@
+/* General Styles */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+
+/* Navigation Bar */
+.navbar {
+  background-color: #014D4E;
+  padding: 20px 0;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: auto;
+  height: 90px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-links2 {
+  display: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+.nav-links li:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  color: #666;
+  text-align: center;
+  padding-bottom: 120px;
+  margin-top: 80px;
+ 
+}
+
+.MV {
+  height: 800px;
+  position: relative;
+}
+
+.MV img {
+  display: block; /* 画像の下に余白ができないようにする */
+  width: 100%; /* 必要に応じて画像の幅を調整 */
+  height: 800px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s;
+  }
+
+.MV img.current {
+  opacity: 1;
+}
+
+.MV2 {
+  padding: 20px 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cta-button a {
+  display: inline-flex; /* ボタンの幅を内容に合わせる */
+  align-items: center; /* テキストと画像を縦方向に中央揃え */
+  justify-content: center; /* 内容を中央に配置 */
+  padding: 10px 20px; /* 内側の余白を調整して、ボタンをコンパクトに */
+  background-color: #154734;
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* フォントサイズを少し小さくしてコンパクトに */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: auto; /* 自動幅調整 */
+  white-space: nowrap; /* テキストが折り返されないようにする */
+}
+
+.cta-button img {
+  padding-left: 10px; /* 画像とテキストの間のスペースを少し狭く */
+  height: 18px; /* アイコンのサイズを調整 */
+  width: auto; /* 幅を自動調整 */
+}
+
+
+
+.cta-button:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+/* Products Section */
+.products {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.products h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #154734;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  flex: 1;
+  margin: 20px 20px 60px 20px;
+  min-width: 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+}
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.product h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #154734;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+  overflow-wrap: break-word;
+}
+
+.product a {
+  text-decoration: none;
+}
+
+/* News Section */
+.news-section {
+  padding: 30px 0 60px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #154734;
+  position: relative;
+}
+
+.subtitle {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.news-item {
+  flex: 1;
+  margin: 20px 20px 60px 20px;
+  min-width: 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+.news-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+ 
+}
+
+.news-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.news-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #154734;
+}
+
+.read-more {
+  align-self: flex-start;
+  color: #154734;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+
+.read-more::after {
+  content: '→';
+  margin-left: 5px;
+  transition: margin-left 0.3s ease;
+}
+
+.read-more:hover {
+  opacity: 0.5;
+}
+
+.read-more:hover::after {
+  margin-left: 10px;
+}
+
+/* news section Responsive Design */
+@media (max-width: 900px) {
+  .news-item {
+    flex: 1 1 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .news-item {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #014D4E;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.navi {
+  
+  padding: 20px;
+}
+
+.footer_nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* アイテム間の余白 */
+}
+
+.footer_nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_nav li {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer_nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.footer_nav a:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.social-links li {
+  margin: 0 10px;
+}
+
+.social-links img {
+  height: 30px;
+}
+.social-links img:hover {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  .footer_nav {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links2 {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      line-height: 3;
+      list-style: none;
+      background-color: #014D4E;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 99;
+      font-size: 20px;
+      opacity: 0;
+      transition: all 0.3s;
+      transform: translate(100%);
+  }
+
+  .nav-links2.show {
+    opacity: 1;
+    transform: none;
+  }
+  
+
+  .nav-links2 a {
+    color: white;
+    text-decoration: none;
+  }
+  .nav-links2 li:hover {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-line {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* ハンバーガーメニューの上下の線 */
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.menu-line::before {
+    top: -10px;
+}
+
+.menu-line::after {
+    top: 10px;
+}
+
+
+  .menu-line.active::before {
+   transform: rotate(45deg);
+  top: 0;
+  }
+
+  .menu-line.active {
+    background-color: transparent;
+  }
+
+  .menu-line.active::after{
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+
+
+
+  .navbar {
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .product-grid {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cta-button {
+      width: 100%;
+      padding: 15px 0;
+  }
+  .MV {
+    height: 500px;
+  }
+
+  .MV img {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+  }
+  .hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+  
+}
