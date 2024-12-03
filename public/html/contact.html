@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edenéa お問い合わせ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/contact.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="container">
+          <div class="logo">
+              <a href="http://localhost:5500/Edenéa-page/public/html/index.html">
+                <img src="/image/edenea_logo.svg" alt="Edenéa">
+              </a>
+          </div>
+           <nav>
+              <ul class="nav-links">
+                  <li><a href="http://localhost:5500/Edenéa-page/public/html/index.html">Home</a></li>
+                  <li><a href="http://localhost:5500/Edenéa-page/public/html/about.html">About</a></li>
+                  <li><a href="http://localhost:3000/product">Products</a></li>
+                  <li><a href="http://localhost:5500/Edenéa-page/public/html/news.html">News</a></li>
+                  <li><a href="http://localhost:3000">Login</a></li>
+              </ul>
+              <div class="burger">
+                  <span class="menu-line"></span>
+              </div>
+          </nav> 
+          <nav>
+            <ul class="nav-links2">
+              <li><a href="http://localhost:5500/Edenéa-page/public/html/index.html">Home</a></li>
+              <li><a href="http://localhost:5500/Edenéa-page/public/html/about.html">About</a></li>
+              <li><a href="http://localhost:3000/product">Products</a></li>
+              <li><a href="http://localhost:5500/Edenéa-page/public/html/news.html">News</a></li>
+              <li><a href="http://localhost:3000">Login</a></li>
+              <li><a href="http://localhost:3000/contact">Contact</a></li>
+            </ul>  
+           </nav>
+
+      
+      </div>
+  </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h1 class="contact-title">お問い合わせ</h1>
+      <div class="contact-description">
+        <p>
+          ご質問やご意見がございましたら、以下のフォームからお気軽にお問い合わせください。
+        </p>
+        <small
+          >※フォームでのお問い合わせの場合、返信に2～3日かかる場合がございます、ご了承くださいませ。</small
+        >
+      </div>
+      <div class="contact-container-tell">
+        <dl class="edit__tel">
+          <dt>お電話でのお問い合わせ先</dt>
+          <dd>株式会社 エデネア</dd>
+          <dd>Tell : 03-5467-8234</dd>
+          <dd>平日10:00～12:00/13:00～17:00</dd>
+        </dl>
+      </div>
+
+      <div class="contact-container">
+        <form
+          action="/contact"
+          method="post"
+          class="contact-form"
+        >
+          <div class="form-group">
+            <label for="name">お名前</label>
+            <span class="required">※必須</span>
+          </div>
+          <div class="form-group">
+            <div class="form-group2">
+              <input type="text" id="name" name="name" placeholder="原田" />
+              <input type="text" id="name" name="name" placeholder="愛子" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="furigana">フリガナ</label>
+            <span class="required2">任意</span>
+          </div>
+          <div class="form-group">
+            <div class="form-group2">
+              <input type="text" id="furigana" name="furigana" placeholder="ハラダ" />
+              <input type="text" id="furigana" name="furigana" placeholder="アイコ" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gender">性別</label>
+            <span class="required2">任意</span>
+            <select id="gender" name="gender">
+              <option value="">選択してください</option>
+              <option value="male">男性</option>
+              <option value="female">女性</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <span class="required">※必須</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="edenea.skin@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password_confirm">電話番号</label>
+            <span class="required">※必須</span>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="080-3254-1160"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inquiry">お問い合わせ内容</label>
+            <span class="required">※必須</span>
+            <textarea
+              id="inquiry"
+              name="inquiry"
+              rows="6"
+              placeholder="お問い合わせ内容を記入してください"
+            ></textarea>
+          </div>
+          <div class="edit__checkbox">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__control"></span>
+              <span></span>
+            </label>
+            <span> <a href="http://localhost:5500/Edenéa-page/public/html/privacy.html">プライバシーポリシー</a>に同意する </span>
+          </div>
+          <div class="contact-form2">
+            <div class="contact-button">
+              <button type="submit">送信</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <nav class="navi">
+        <div class="footer_nav">
+          <ul>
+            <li>
+              <a href="http://localhost:5500/Edenéa-page/public/html/index.html">ショップサイトTOP</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://localhost:3000">マイページへ</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://localhost:3000/contact">お問い合わせ</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://localhost:5500/Edenéa-page/public/html/TOS.html">利用規約</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://localhost:5500/Edenéa-page/public/html/privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="http://localhost:5500/Edenéa-page/public/html/sctl.html">特定商取引法に基づく表記</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <div class="container">
+            <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <img src="/image/facebook.svg" alt="Facebook">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <img src="/image/instagram.svg" alt="Instagram">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/">
+                    <img src="/image/X.svg" alt="X">
+                  </a>
+                </li>
+            </ul>
+            <p>&copy; 2024 Edenéa. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
