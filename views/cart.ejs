@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カートの内容</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/product.css">
+</head>
+<body>
+<section class="cart-section">
+  <h1>カートの内容</h1>
+  <div class="cart-section2">
+    <ul id="cart-items">
+      <% cartItems.forEach(item => { %>
+      <li class="cart-item">
+        <img src="<%= item.image_path %>" alt="<%= item.name %>">
+        <div class="cart-item2">
+          <h3><%= item.name %></h3>
+          <p>本体　<%= item.formattedPrice %>円 （税込）</p>
+          <p>数量
+            <form class="update-quantity-form" method="POST" action="/cart/update-quantity">
+              <input type="number" name="quantity" value="<%= item.quantity %>" min="1">
+              <input type="hidden" name="itemId" value="<%= item.product_id %>">
+              <button type="submit" class="change-btn">数量を変更</button>
+            </form>
+          </p>
+          <form class="delete-item-form" method="POST" action="/cart/delete">
+            <input type="hidden" name="itemId" value="<%= item.product_id %>"> 
+            <button type="submit" class="delete-btn">カートから削除</button>
+          </form>
+        </div>
+      </li>
+      <% }); %>
+      <div class="product-back">
+        <a href="/product" class="shop">買い物を続ける</a>
+      </div>
+  
+    </ul>
+  </div>
+
+<!-- 合計表示エリア -->
+  <div class="cart-summary">
+    <p>合計数量 : <span id="total-quantity"><%= totalQuantity %></span>点</p>
+    <p>合計金額 : <span id="total-price"><%= totalPrice %></span>円</p>
+  </div>
+
+  <div class="product-back">
+    <a href="/mypage">マイページへ戻る</a>
+    <a href="/checkout" class="pay">お会計</a>
+  </div>
+</section>
+
+
+
+
+</body>
+</html>

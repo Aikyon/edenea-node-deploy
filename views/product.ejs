@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edenéa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/product.css">
+    <script src="/app.js" defer></script>
+</head>
+<body>
+  <% /* Navigation Bar */ %>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="http://localhost:5500/Edenéa-page/public/html/index.html">
+          <img src="/image/edenea_logo.svg" alt="Edenéa" />
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/index.html">Home</a></li>
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/about.html">About</a></li>
+          <li><a href="/product">Products</a></li>
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/news.html">News</a></li>
+          <li><a href="/">Login</a></li>
+        </ul>
+        <div class="burger">
+          <span class="menu-line"></span>
+        </div>
+      </nav>
+      <nav>
+        <ul class="nav-links2">
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/index.html">Home</a></li>
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/about.html">About</a></li>
+          <li><a href="/product">Products</a></li>
+          <li><a href="http://localhost:5500/Edenéa-page/public/html/news.html">News</a></li>
+          <li><a href="/">Login</a></li>
+          <li><a href="http://localhost:3000/contact">Contact</a></li>
+        </ul>  
+       </nav>
+
+    </div>
+  </header>
+<% /* Product Section */ %>
+
+<% /* SKIN PRODUCT Section */ %>
+<section class="product-section" id="skin">
+  <h2>SKIN</h2>
+  <div class="svg-animation">
+    <svg width="200" height="50" viewBox="0 0 200 50">
+      <line class="line" x1="0" y1="25" x2="200" y2="25" stroke="#154734" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200"></line>
+    </svg>
+  </div>    
+  <ul class="product-list">
+    <% products.filter(product => product.category === 'skin').forEach(product => { %>
+      <li class="product-item">
+        <img src="<%= product.image_path %>" alt="<%= product.name %>"> 
+        <h3><%= product.name %></h3>
+        <p class="product-text"><%= product.description_2 %></p>
+        <p><%= product.description %></p>
+        <p>- 効果 -<br><%= product.description_3 %></p>
+        <p>本体　<%= product.formattedPrice %>円（税込）<%= product.unit_price_description %></p>
+        <div class="product-buy">          
+          <form action="/cart" method="POST">
+            <button type="submit" class="add-to-cart">カートに追加</button>
+            <input type="number" name="quantity" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="productId" value="<%= product.product_id %>">
+          </form>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+</section>
+
+<% /* HAND & BODY PRODUCT Section */ %>
+<section class="product-sec" id="hand-body">
+  <h2>HAND & BODY</h2>
+  <div class="svg-animation">
+    <svg width="200" height="50" viewBox="0 0 200 50">
+      <line class="line" x1="0" y1="25" x2="200" y2="25" stroke="#154734" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200"></line>
+    </svg>
+  </div>    
+  <ul class="product-list">
+    <% products.filter(product => product.category === 'hand_body').forEach(product => { %>
+      <li class="product-item">
+        <img src="<%= product.image_path %>" alt="<%= product.name %>"> 
+        <h3><%= product.name %></h3>
+        <p class="product-text"><%= product.description_2 %></p>
+        <p><%= product.description %></p>
+        <p>- 効果 -<br><%= product.description_3 %></p>
+        <p>本体　<%= product.formattedPrice %>円（税込）<%= product.unit_price_description %></p>
+        <div class="product-buy">
+          <form action="/cart" method="POST">
+            <button type="submit" class="add-to-cart">カートに追加</button>
+            <input type="number" name="quantity" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="productId" value="<%= product.product_id %>">
+          </form>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+</section>
+
+<% /* GIFT & GOODS PRODUCT Section */ %>
+<section class="product-sec" id="gift-goods">
+  <h2>GIFT & GOODS</h2>
+  <div class="svg-animation">
+    <svg width="200" height="50" viewBox="0 0 200 50">
+      <line class="line" x1="0" y1="25" x2="200" y2="25" stroke="#154734" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200"></line>
+    </svg>
+  </div>    
+  <ul class="product-list">
+    <% products.filter(product => product.category === 'gift_goods').forEach(product => { %>
+      <li class="product-item">
+        <img src="<%= product.image_path %>" alt="<%= product.name %>">  
+        <h3><%= product.name %></h3>
+        <p class="product-text"><%= product.description_2 %></p>
+        <p><%= product.description %></p>
+        <p>本体　<%= product.formattedPrice %>円（税込）<%= product.unit_price_description %></p>
+        <div class="product-buy">
+          <form action="/cart" method="POST">
+            <button type="submit" class="add-to-cart">カートに追加</button>
+            <input type="number" name="quantity" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="productId" value="<%= product.product_id %>">
+          </form>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+</section>
+
+
+
+<%- include('partials/footer') %>

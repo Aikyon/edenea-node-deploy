@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+    <!-- Login Section -->
+    <section class="login-section">
+      <div class="login-container">
+        <h1 class="login-title">ログイン</h1>
+        <form class="login-form" action="/login" method="POST">
+
+         <!--<form class="login-form" id="loginForm"> -->
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input
+              type="email"
+              id="email"
+              name="username"
+              placeholder="edenea.skin@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">パスワード</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="パスワードを入力して下さい"
+              required
+            />
+          </div>
+          <button type="submit" class="login-button">ログイン</button>
+        </form>
+      </div>
+      <div class="register-link">
+        <a href="/register">新規会員登録へ</a>
+      </div>
+    </section>
+
+<%- include('partials/footer') %>
