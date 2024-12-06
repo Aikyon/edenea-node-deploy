@@ -70,6 +70,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+// mainページ
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
+});
+
+
+
 // GETリクエストのルートを追加
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'html','contact.html')); // contact.htmlを返す
@@ -78,7 +85,7 @@ app.get('/contact', (req, res) => {
 
 
 // ルート
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("home.ejs");
 });
 
