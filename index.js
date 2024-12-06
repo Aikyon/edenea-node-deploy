@@ -80,6 +80,43 @@ app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'html', 'about.html'));
 });
 
+// newsページ
+app.get('/news', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news.html'));
+});
+
+app.get('/news-end-products', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news-end-products.html'));
+});
+
+app.get('/news-handcare', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news-handcare.html'));
+});
+
+app.get('/news-new-item', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news-new-item.html'));
+});
+
+app.get('/news-official-site', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news-official-site.html'));
+});
+
+app.get('/news-summer-holiday', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'news-summer-holiday.html'));
+});
+
+// 規約ページ
+app.get('/privacy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'privacy.html'));
+});
+
+app.get('/sctl', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'sctl.html'));
+});
+
+app.get('/TOS', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'html', 'TOS.html'));
+});
 
 
 
@@ -206,7 +243,7 @@ app.get("/checkout", (req, res) => {
 app.get("/logout", (req, res) => {
   req.logout((err) => {
     if (err) console.log(err);
-    res.redirect("/");
+    res.redirect("/home");
   });
 });
 

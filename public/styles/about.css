@@ -75,7 +75,7 @@ p {
 
 .main-image-section {
   position: relative;
-  background-image: url('/Edenéa-page/public/image/forest-image.png');
+  background-image: url('/image/forest-image.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
